@@ -12,6 +12,7 @@ MANAGERS = (
 
 ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS').split(',')
 
+
 #
 # django-cachalot
 #
