@@ -1,0 +1,11 @@
+{
+  "name": "curbyourlitter-alley-static",
+  "version": "0.1.0",
+  "description": "Static files for curbyourlitter-alley",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Brelsford <ebrelsford@gmail.com> (http://ebrelsford.github.io/)",
+  "license": "AGPL-3.0"
+}

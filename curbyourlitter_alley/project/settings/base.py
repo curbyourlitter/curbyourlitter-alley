@@ -81,9 +81,9 @@ USE_TZ = True
 
 
 # Media and static paths
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, '..', 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'collected_static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, '..', 'collected_static')
 STATIC_URL = '/static/'
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
