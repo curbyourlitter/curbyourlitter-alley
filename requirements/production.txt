@@ -1,2 +1,3 @@
+gunicorn==19.3.0
 django-cachalot==1.0.3
 git+git://github.com/pinax/django-mailer/@919805e25fc18b06487b25414d4e5d5e05a92108
