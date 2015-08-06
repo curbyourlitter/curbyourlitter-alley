@@ -22,7 +22,7 @@ INSTALLED_APPS += (
 )
 CACHES = {
     'default': {
-        'BACKEND': 'caching.backends.memcached.MemcachedCache',
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
         'LOCATION': [
             get_env_variable('MEMCACHE_LOCATION'),
         ],
