@@ -27,11 +27,16 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',
+    'rest_framework',
+    'rest_framework_gis',
+
     'requests',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -89,3 +94,15 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, '..', 'collected_static')
 STATIC_URL = '/static/'
 
 SECRET_KEY = get_env_variable('SECRET_KEY')
+
+CORS_ALLOW_HEADERS = (
+    'x-requested-with',
+    'content-type',
+    'accept',
+    'origin',
+    'authorization',
+    'x-csrftoken',
+    'user-agent',
+    'accept-encoding',
+    'cache-control',
+)

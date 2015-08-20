@@ -94,3 +94,5 @@ LOGGING = {
 # TODO uncomment for SSL
 #CSRF_COOKIE_SECURE = True
 #SESSION_COOKIE_SECURE = True
+
+CORS_ORIGIN_REGEX_WHITELIST = ('^(https?://)?(\w+\.)?curbyourlitter\.org$', )

@@ -81,3 +81,5 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+CORS_ORIGIN_ALLOW_ALL = True
