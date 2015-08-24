@@ -31,7 +31,7 @@ INSTALLED_APPS = (
     'rest_framework',
     'rest_framework_gis',
 
-    'requests',
+    'canrequests',
 )
 
 MIDDLEWARE_CLASSES = (

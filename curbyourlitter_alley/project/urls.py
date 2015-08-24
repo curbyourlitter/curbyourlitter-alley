@@ -5,7 +5,7 @@ from django.contrib import admin
 
 from rest_framework import routers
 
-from requests.views import CanRequestViewSet
+from canrequests.views import CanRequestViewSet
 
 
 router = routers.DefaultRouter()
