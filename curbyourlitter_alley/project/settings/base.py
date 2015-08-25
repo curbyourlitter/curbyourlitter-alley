@@ -32,6 +32,7 @@ INSTALLED_APPS = (
     'rest_framework_gis',
 
     'canrequests',
+    'socratasync',
 )
 
 MIDDLEWARE_CLASSES = (
