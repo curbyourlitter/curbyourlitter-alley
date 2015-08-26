@@ -1,7 +1,7 @@
 from .base import *
 
 DEBUG = True
-TEMPLATES[0]['DEBUG'] = DEBUG
+TEMPLATES[0]['OPTIONS']['debug'] = DEBUG
 
 ADMINS = (
     ('Admin', 'admin@example.com'),
