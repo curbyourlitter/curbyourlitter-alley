@@ -3,6 +3,7 @@ from django.contrib.gis.db import models
 
 class CanRequest(models.Model):
     CAN_TYPES = (
+        ('bigbelly', 'bigbelly'),
         ('garbage', 'garbage'),
         ('recycling', 'recycling'),
     )
@@ -10,3 +11,5 @@ class CanRequest(models.Model):
     comment = models.TextField()
     geom = models.PointField()
     image = models.ImageField(upload_to='can_requests')
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
