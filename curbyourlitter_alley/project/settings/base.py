@@ -27,6 +27,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'cartodbsync',
     'corsheaders',
     'rest_framework',
     'rest_framework_gis',
@@ -110,3 +111,15 @@ CORS_ALLOW_HEADERS = (
     'accept-encoding',
     'cache-control',
 )
+
+CARTODB_SYNC = {
+    'API_KEY': get_env_variable('CARTODBSYNC_API_KEY'),
+    'DOMAIN': get_env_variable('CARTODBSYNC_DOMAIN'),
+    'MODELS': [
+        {
+            'CARTODB_TABLE': get_env_variable('CARTODBSYNC_CANREQUEST_TABLE'),
+            'MODEL_CLASS': 'canrequests.CanRequest',
+            'SYNCHRONIZER_CLASS': 'canrequests.cartodbsynchronizers.CanRequestSynchronizer',
+        }
+    ]
+}

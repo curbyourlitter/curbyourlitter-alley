@@ -96,3 +96,5 @@ LOGGING = {
 #SESSION_COOKIE_SECURE = True
 
 CORS_ORIGIN_REGEX_WHITELIST = ('^(https?://)?(\w+\.)?curbyourlitter\.org$', )
+
+BASE_URL = 'http://data.curbyourlitter.org'

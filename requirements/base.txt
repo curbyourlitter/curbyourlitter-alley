@@ -10,3 +10,5 @@ git+https://github.com/xmunoz/sodapy.git@python3
 
 git+https://github.com/ebrelsford/python-oauth2.git@py3k
 git+https://github.com/ebrelsford/cartodb-python.git@py3k
+
+django-cartodb-sync==0.2.2
