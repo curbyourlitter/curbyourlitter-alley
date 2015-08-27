@@ -10,6 +10,10 @@ MANAGERS = (
     ('', 'admin@curbyourlitter.org'),
 )
 
+MODERATORS = (
+    ('', 'moderator@curbyourlitter.org'),
+)
+
 ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS').split(',')
 
 
