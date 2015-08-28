@@ -1,4 +1,3 @@
 #!/bin/bash
-source $HOME/.bashrc
-source $HOME/.virtualenvs/$ALLEY_VIRTUAL_ENV/bin/activate
-django-admin cartodbsync
+source $HOME/.bash_profile
+workon $ALLEY_VIRTUAL_ENV && django-admin cartodbsync
