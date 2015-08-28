@@ -15,3 +15,4 @@ class CanRequest(models.Model):
     image = models.ImageField(upload_to='can_requests', blank=True, null=True)
     name = models.CharField(max_length=100)
     email = models.EmailField()
+    added = models.DateTimeField(auto_now_add=True)
