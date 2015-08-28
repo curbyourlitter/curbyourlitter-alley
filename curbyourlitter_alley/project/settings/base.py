@@ -34,7 +34,6 @@ INSTALLED_APPS = (
 
     'canrequests',
     'socratasync',
-    'streetratings',
 )
 
 MIDDLEWARE_CLASSES = (
