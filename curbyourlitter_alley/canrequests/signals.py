@@ -16,8 +16,9 @@ def send_moderation_email(can_request):
     }
     text = get_template('canrequests/moderation_email.txt').render(ctx)
     html = get_template('canrequests/moderation_email.html').render(ctx)
-    send_mail('New can request', text, settings.DEFAULT_FROM_EMAIL,
-              settings.MODERATORS, html_message=html)
+    send_mail(settings.EMAIL_SUBJECT_PREFIX + 'New can request', text,
+              settings.DEFAULT_FROM_EMAIL, settings.MODERATORS,
+              html_message=html)
 
 
 @receiver(post_save, sender=CanRequest, dispatch_uid='canrequests.models.sync_on_save')

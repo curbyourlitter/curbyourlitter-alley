@@ -98,6 +98,8 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, '..', 'collected_static')
 STATIC_URL = '/static/'
 
+EMAIL_SUBJECT_PREFIX = '[Curb Your Litter] '
+
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
 CORS_ALLOW_HEADERS = (
