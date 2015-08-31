@@ -8,7 +8,7 @@ class CartodbTableAdmin(admin.ModelAdmin):
 
 
 class SocrataResourceAdmin(admin.ModelAdmin):
-    list_display = ('endpoint', 'domain',)
+    list_display = ('endpoint', 'name', 'domain',)
 
 
 admin.site.register(CartodbTable, CartodbTableAdmin)

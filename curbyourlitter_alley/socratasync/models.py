@@ -2,6 +2,7 @@ from django.db import models
 
 
 class SocrataResource(models.Model):
+    name = models.CharField(max_length=100)
     conditions = models.TextField()
     domain = models.CharField(max_length=100)
     endpoint = models.CharField(max_length=500)
@@ -9,6 +10,8 @@ class SocrataResource(models.Model):
     unique_key = models.CharField(max_length=50)
 
     def __str__(self):
+        if self.name:
+            return self.name
         return '{}{}'.format(self.domain, self.endpoint)
 
 
