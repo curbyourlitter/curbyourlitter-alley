@@ -30,6 +30,7 @@ INSTALLED_APPS = (
 
     'cartodbsync',
     'corsheaders',
+    'imagekit',
     'rest_framework',
     'rest_framework_gis',
 

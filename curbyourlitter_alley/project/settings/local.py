@@ -61,8 +61,13 @@ MIDDLEWARE_CLASSES += (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
+# imagekit has to come after debug_toolbar else we get annoying templatetag
+# errors
+INSTALLED_APPS = tuple(filter(lambda a: a != 'imagekit', INSTALLED_APPS))
+
 INSTALLED_APPS += (
     'debug_toolbar',
+    'imagekit',
 )
 
 DEBUG_TOOLBAR_PANELS = (
