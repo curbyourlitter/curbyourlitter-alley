@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.gis.geos import Point
+from django.utils.timezone import now
 
 from rest_framework import viewsets
 from rest_framework.response import Response
@@ -14,6 +15,14 @@ from .serializers import CanRequestSerializer
 class CanRequestViewSet(viewsets.ModelViewSet):
     queryset = CanRequest.objects.all()
     serializer_class = CanRequestSerializer
+
+    def update(self, request, pk=None):
+        # Only allow updating CanRequest objects within five minutes
+        can_request = CanRequest.objects.get(pk=pk)
+        if can_request:
+            if (now() - can_request.added).seconds <= 5 * 60:
+                return super(CanRequestViewSet, self).update(request, pk=pk)
+        return Response({ 'error': 'too late!' })
 
 
 class PostImage(APIView):
