@@ -1,0 +1,20 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+        <link href="{% static "dist/styles/main.css" %}" rel="stylesheet" type="text/css" />
+
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+        <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+        <script>
+            var ratingsConfig = {
+                cartodbApiKey: '{{ cartodbApiKey }}'
+            };
+        </script>
+        <script src="{% static "dist/scripts/bundle.js" %}"></script>
+    </head>
+    <body style="height: 100%; margin: 0; width: 100%;">
+        <div id="app" class="ratings"></div>
+    </body>
+</html>

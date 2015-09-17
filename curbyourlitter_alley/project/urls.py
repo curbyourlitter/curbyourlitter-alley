@@ -12,6 +12,7 @@ router = routers.DefaultRouter()
 router.register('canrequests', CanRequestViewSet)
 
 urlpatterns = [
+    url(r'^streetratings/', include('streetratings.urls')),
     url(r'^canrequests/image/', PostImage.as_view()),
     url(r'^', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),

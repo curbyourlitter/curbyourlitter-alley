@@ -1,0 +1,30 @@
+.ratings {
+  height: 100%;
+  width: 100%;
+}
+.ratings .app-container {
+  height: 100%;
+  width: 100%;
+}
+.ratings .ratings-map {
+  height: 100%;
+  width: 100%;
+}
+.ratings .rating-panel {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  width: 300px;
+  height: 75%;
+  padding: 25px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.ratings .rating-panel h2 {
+  margin: 0;
+}
+.ratings .rating-add label {
+  display: block;
+  margin-top: 5px;
+}
