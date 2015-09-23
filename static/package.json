@@ -22,6 +22,6 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
-    "curbyourlitter-pavement": "git+https://github.com/curbyourlitter/curbyourlitter-pavement.git#v0.3.0"
+    "curbyourlitter-pavement": "git+https://github.com/curbyourlitter/curbyourlitter-pavement.git#v0.4.1"
   }
 }
