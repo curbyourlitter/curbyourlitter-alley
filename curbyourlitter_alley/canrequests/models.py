@@ -8,8 +8,7 @@ from .mail import send_moderation_email
 
 class CanRequest(models.Model):
     CAN_TYPES = (
-        ('bigbelly', 'bigbelly'),
-        ('garbage', 'garbage'),
+        ('litter', 'litter'),
         ('recycling', 'recycling'),
     )
     can_type = models.CharField(choices=CAN_TYPES, max_length=25, blank=True,
