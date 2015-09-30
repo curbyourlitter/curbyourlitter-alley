@@ -28,7 +28,7 @@ class CanRequestSynchronizer(BaseSynchronizer):
         }
 
         try:
-            mapping['image'] = settings.BASE_URL + instance.image.url
+            mapping['image'] = settings.BASE_URL + instance.image_medium_thumbnail.url
         except ValueError:
             pass
 
