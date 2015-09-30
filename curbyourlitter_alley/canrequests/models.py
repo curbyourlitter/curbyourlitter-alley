@@ -1,7 +1,7 @@
 from django.contrib.gis.db import models
 
-from imagekit.models import ImageSpecField
-from imagekit.processors import ResizeToFill
+from imagekit.models import ImageSpecField, ProcessedImageField
+from imagekit.processors import ResizeToFill, Transpose
 
 from .mail import send_moderation_email
 
@@ -16,10 +16,12 @@ class CanRequest(models.Model):
     can_subtype = models.CharField(max_length=50, blank=True, null=True)
     comment = models.TextField(blank=True, null=True)
     geom = models.PointField(blank=True, null=True)
-    image = models.ImageField(upload_to='can_requests', blank=True, null=True)
+    image = ProcessedImageField(upload_to='can_requests', blank=True,
+                                null=True, processors=[Transpose()],
+                                format='JPEG', options={'quality': 60})
     image_thumbnail = ImageSpecField(
         source='image',
-        processors=[ResizeToFill(150, 150)],
+        processors=[Transpose(), ResizeToFill(150, 150)],
         format='JPEG',
         options={'quality': 60}
     )
