@@ -11,7 +11,7 @@ MANAGERS = (
 )
 
 MODERATORS = (
-    'ebrelsford@gmail.com',
+    'caroline@greenpointchamber.com',
 )
 
 ALLOWED_HOSTS = get_env_variable('ALLOWED_HOSTS').split(',')
