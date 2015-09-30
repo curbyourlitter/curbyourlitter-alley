@@ -28,7 +28,7 @@
             <div>
                 {% if obj.image %}
                     Image attached to post:
-                    <img style="max-width: 100%;" src="{{ base_url }}{{ obj.image.url }}" />
+                    <img style="max-width: 100%;" src="{{ base_url }}{{ obj.image_medium_thumbnail.url }}" />
                 {% else %}
                     No image attached to request.
                 {% endif %}
