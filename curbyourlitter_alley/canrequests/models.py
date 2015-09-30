@@ -32,6 +32,7 @@ class CanRequest(models.Model):
     name = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     added = models.DateTimeField(auto_now_add=True)
+    mailing_list_opt_in = models.BooleanField(default=False)
 
     __original_name = None
     __original_email = None
