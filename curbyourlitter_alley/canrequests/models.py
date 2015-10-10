@@ -45,9 +45,13 @@ class CanRequest(models.Model):
     def save(self, *args, **kwargs):
         # If we're newly adding name and email--a newly complete request--send
         # the moderation email
-        if self.name and self.email and (not self.pk or not \
-                                           (self.__original_name or self.__original_email)):
-            send_moderation_email(self)
+        should_send_moderation_email = (
+            self.name and self.email and (not self.pk or not (self.__original_name or self.__original_email))
+        )
+
         super(CanRequest, self).save(*args, **kwargs)
         self.__original_name = self.name
         self.__original_email = self.email
+
+        if should_send_moderation_email:
+            send_moderation_email(self)
