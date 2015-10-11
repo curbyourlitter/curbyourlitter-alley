@@ -8,6 +8,7 @@ future==0.15.0
 Pillow==2.9.0
 pip==7.1.2
 psycopg2==2.6.1
+redis==2.10.3
 git+https://github.com/xmunoz/sodapy.git@python3
 
 git+https://github.com/ebrelsford/python-oauth2.git@py3k
