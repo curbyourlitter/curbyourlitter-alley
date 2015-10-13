@@ -43,7 +43,8 @@ def geom(row):
         longitude = row['longitude']
         latitude = row['latitude']
     except KeyError:
-        print('no latlng', row['x_coordinate_state_plane_'], row['y_coordinate_state_plane_'])
+        print('no latlng', row.get('x_coordinate_state_plane_', None),
+              row.get('y_coordinate_state_plane_', None))
         return None
         # TODO reproject -> WGS84
         #x = row['x_coordinate_state_plane_']
