@@ -131,6 +131,9 @@ CARTODB_SYNC = {
     ]
 }
 
+CARTODB_CLEAN_TABLES = ['canrequests', 'threeoneone']
+CARTODB_CLEAN_BBOX = [-73.971634, 40.710573, -73.922625, 40.740429]
+
 # CELERY SETTINGS
 BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
