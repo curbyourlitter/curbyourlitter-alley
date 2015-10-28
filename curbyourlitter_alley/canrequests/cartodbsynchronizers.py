@@ -13,6 +13,7 @@ class CanRequestSynchronizer(BaseSynchronizer):
             'can_subtype',
             'comment',
             'image',
+            'name',
             'the_geom',
         ]
 
@@ -24,6 +25,7 @@ class CanRequestSynchronizer(BaseSynchronizer):
             'can_subtype': instance.can_subtype,
             'comment': instance.comment,
             'image': None,
+            'name': instance.name,
             'the_geom': instance.geom,
         }
 
