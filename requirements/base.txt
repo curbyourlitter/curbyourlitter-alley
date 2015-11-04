@@ -2,6 +2,7 @@ celery==3.1.18
 Django==1.8.4
 django-braces==1.8.1
 django-cors-headers==1.1
+git+https://github.com/ebrelsford/mailchimp_subscribe@master
 djangorestframework==3.1.3
 djangorestframework-gis==0.9.3
 future==0.15.0

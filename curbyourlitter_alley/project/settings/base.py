@@ -139,3 +139,10 @@ BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+
+#
+# Mailchimp
+#
+MAILCHIMP_API_KEY = get_env_variable('MAILCHIMP_API_KEY')
+MAILCHIMP_LIST_ID = get_env_variable('MAILCHIMP_LIST_ID')
