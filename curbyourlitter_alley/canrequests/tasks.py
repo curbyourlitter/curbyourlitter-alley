@@ -15,8 +15,8 @@ def synchronize_canrequests():
 
 
 @shared_task
-def subscribe_to_mailinglist():
+def subscribe_to_mailinglist(email):
     if settings.DEBUG:
-        print('Would be subscribing to mailinglist, but we are in debug mode')
+        print('Would be subscribing {} to mailinglist, but we are in debug mode'.format(email))
     else:
-        subscribe()
+        subscribe(email)

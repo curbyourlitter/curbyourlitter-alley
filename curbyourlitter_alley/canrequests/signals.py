@@ -10,7 +10,7 @@ from .tasks import subscribe_to_mailinglist, synchronize_canrequests
 @receiver(post_save, sender=CanRequest, dispatch_uid='canrequests.models.subscribe_on_save')
 def subscribe_on_save(sender, instance=None, created=False, **kwargs):
     if instance and instance.mailing_list_opt_in:
-        subscribe_to_mailinglist.delay()
+        subscribe_to_mailinglist.delay(instance.email)
 
 
 @receiver(post_save, sender=CanRequest, dispatch_uid='canrequests.models.sync_on_save')
